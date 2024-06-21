@@ -58,18 +58,17 @@ export default async function app(appDiv) {
         favoriteLanguage: formData.get('favoriteLanguage')
     };
 
-    // const userData = Object.fromEntries(formData)
-    console.log(formData); // Debugging: log formData to console
-    console.log(userData); // Debugging: log userData to console
+  
+    console.log(formData);
+    console.log(userData);
 
     try {
-        const newUser = await createNewUser(userData); // Call createNewUser with userData
-        renderNewUser(newUserEl, newUser); // Render new user data
+        const newUser = await createNewUser(userData);
+        renderNewUser(newUserEl, newUser); 
 
-        newUserFormEl.reset; // Reset the form after successful submission
+        newUserFormEl.reset;
     } catch (error) {
         console.error('Failed to create new user:', error);
-        // Handle error as needed (e.g., display error message to user)
     }
   });
 }
