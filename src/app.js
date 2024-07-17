@@ -57,6 +57,11 @@ export default async function app(appDiv) {
         isCool: isCooli,
         favoriteLanguage: formData.get('favoriteLanguage')
     };
+    /*
+    FEEDBACK:
+    Nice way to get the values in an object! Another way is to use Object.fromEntries(formData).
+    This will take the form data and return an object of it! 
+    */
 
   
     console.log(formData);

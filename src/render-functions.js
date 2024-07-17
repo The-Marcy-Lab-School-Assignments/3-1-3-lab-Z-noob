@@ -11,6 +11,13 @@ export const renderBookList = (bookListEl, books) => {
     imgElem.alt = `An old cover of ${book.title}`
     pElement.textContent = `Title: ${book.title}`
     buttonElem.textContent = `View ${book.author.name}`
+    /*
+    FEEDBACK:
+    Great job here! 
+    One thing I noticed is that you added the data set twice.
+    Both lines under this comment are valid ways of adding the dataset, however, 
+    You only need one of them. 
+    */
     buttonElem.setAttribute('data-author-url-key', `${book.author.urlKey}`)
     buttonElem.dataset.authorUrlKey = book.author.urlKey
 
